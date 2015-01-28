@@ -7,7 +7,7 @@ from scrapy.http import Request
 
 class Dice1StPipeline(object):
      def __init__(self):
-         self.conn = MySQLdb.connect(host="221.143.46.115",user="askstoryteam",passwd="qlwmsoqkfths",db="askstoryci_test")
+         self.conn = MySQLdb.connect(host="221.143.46.115",user="askstoryteam",passwd= ,db="askstoryci_test")
          self.cursor = self.conn.cursor()
 
      def process_item(self, item, spider):

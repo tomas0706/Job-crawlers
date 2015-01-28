@@ -9,7 +9,7 @@ from scrapy.http import Request
 #스파이더로 수집한 데이터를 mysql 데이터베이스 askstoryci_test.cr_jobs_internships 테이블에 저장한다. Company_name, title, address,html_dat, application_deadline, position 등을 저장한다. 
 class Snagajob2NdPipeline(object):
 	def __init__(self):
-		self.conn = MySQLdb.connect(host="221.143.46.115",user="askstoryteam",passwd="qlwmsoqkfths",db="askstoryci_test", charset='utf8', use_unicode=True)
+		self.conn = MySQLdb.connect(host="221.143.46.115",user="askstoryteam",passwd="",db="askstoryci_test", charset='utf8', use_unicode=True)
 		self.cursor = self.conn.cursor()
 		self.conn.commit()
 	def process_item(self, item, spider):
